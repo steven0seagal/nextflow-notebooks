@@ -1,0 +1,55 @@
+# Nextflow work directory
+work/
+
+# Nextflow logs
+.nextflow.log*
+.nextflow/
+
+# Nextflow temporary files
+.nextflow.*
+
+# Results and output directories (customize as needed)
+results/
+outputs/
+
+# Timeline, reports, and execution traces
+timeline.html
+report.html
+trace.txt
+dag.dot
+dag.html
+*.html
+*.svg
+
+# Tower configuration
+tower.yml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Singularity/Docker
+*.sif
+*.img
