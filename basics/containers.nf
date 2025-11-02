@@ -1,0 +1,36 @@
+#!/usr/bin/env nextflow
+
+/*
+ * Pipeline parameters
+ */
+params.greeting = 'greetings.csv'
+params.batch = 'test-batch'
+params.character = 'tux'
+// Include modules
+include { sayHello } from './solutions/sayHello.nf'
+include { convertToUpper } from './solutions/convertToUpper.nf'
+include { collectGreetings } from './solutions/collectGreetings.nf'
+include { cowpy } from './solutions/cowpy.nf'
+workflow {
+
+    // create a channel for inputs from a CSV file
+    greeting_ch = Channel.fromPath(params.greeting)
+                        .splitCsv()
+                        .map { line -> line[0] }
+
+    // emit a greeting
+    sayHello(greeting_ch)
+
+    // convert the greeting to uppercase
+    convertToUpper(sayHello.out)
+
+    // collect all the greetings into one file
+    collectGreetings(convertToUpper.out.collect(), params.batch)
+
+    // emit a message about the size of the batch
+    collectGreetings.out.count.view { num_greetings -> "There were $num_greetings greetings in this batch" }
+
+    // generate ASCII art with cowpy
+    cowpy(collectGreetings.out.outfile, params.character)
+
+}
