@@ -1,0 +1,7 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	SAMPLE1_PE_1	/home/bartek/Pycharm/my_projects/nextflow-notebooks/nf-core/work/b6/90c3b1172fff5cd5eda4eb68ef669a/8/SAMPLE1_PE_1_fastqc.zip
+FastQC	all_sections	SAMPLE1_PE_2	/home/bartek/Pycharm/my_projects/nextflow-notebooks/nf-core/work/b6/90c3b1172fff5cd5eda4eb68ef669a/9/SAMPLE1_PE_2_fastqc.zip
+FastQC	all_sections	SAMPLE2_PE_1	/home/bartek/Pycharm/my_projects/nextflow-notebooks/nf-core/work/b6/90c3b1172fff5cd5eda4eb68ef669a/4/SAMPLE2_PE_1_fastqc.zip
+FastQC	all_sections	SAMPLE2_PE_2	/home/bartek/Pycharm/my_projects/nextflow-notebooks/nf-core/work/b6/90c3b1172fff5cd5eda4eb68ef669a/5/SAMPLE2_PE_2_fastqc.zip
+FastQC	all_sections	SAMPLE3_SE_1	/home/bartek/Pycharm/my_projects/nextflow-notebooks/nf-core/work/b6/90c3b1172fff5cd5eda4eb68ef669a/6/SAMPLE3_SE_1_fastqc.zip
+FastQC	all_sections	SAMPLE3_SE_2	/home/bartek/Pycharm/my_projects/nextflow-notebooks/nf-core/work/b6/90c3b1172fff5cd5eda4eb68ef669a/7/SAMPLE3_SE_2_fastqc.zip
