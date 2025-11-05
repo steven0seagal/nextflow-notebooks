@@ -53,3 +53,5 @@ Thumbs.db
 # Singularity/Docker
 *.sif
 *.img
+
+helo-results/
