@@ -13,7 +13,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
 
-include { HELLO-TEST  } from './workflows/hello-test'
+include { HELLO_TEST  } from './workflows/hello-test'
 include { PIPELINE_INITIALISATION } from './subworkflows/local/utils_nfcore_hello-test_pipeline'
 include { PIPELINE_COMPLETION     } from './subworkflows/local/utils_nfcore_hello-test_pipeline'
 include { getGenomeAttribute      } from './subworkflows/local/utils_nfcore_hello-test_pipeline'
@@ -38,7 +38,7 @@ params.fasta = getGenomeAttribute('fasta')
 //
 // WORKFLOW: Run main analysis pipeline depending on type of input
 //
-workflow HELLO_HELLO-TEST {
+workflow HELLO_HELLO_TEST {
 
     take:
     samplesheet // channel: samplesheet read in from --input
@@ -48,11 +48,11 @@ workflow HELLO_HELLO-TEST {
     //
     // WORKFLOW: Run pipeline
     //
-    HELLO-TEST (
+    HELLO_TEST (
         samplesheet
     )
     emit:
-    multiqc_report = HELLO-TEST.out.multiqc_report // channel: /path/to/multiqc_report.html
+    multiqc_report = HELLO_TEST.out.multiqc_report // channel: /path/to/multiqc_report.html
 }
 /*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -78,7 +78,7 @@ workflow {
     //
     // WORKFLOW: Run main workflow
     //
-    HELLO_HELLO-TEST (
+    HELLO_HELLO_TEST (
         PIPELINE_INITIALISATION.out.samplesheet
     )
     //
@@ -91,7 +91,7 @@ workflow {
         params.outdir,
         params.monochrome_logs,
         params.hook_url,
-        HELLO_HELLO-TEST.out.multiqc_report
+        HELLO_HELLO_TEST.out.multiqc_report
     )
 }
 

@@ -16,7 +16,7 @@ include { methodsDescriptionText } from '../subworkflows/local/utils_nfcore_hell
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
 
-workflow HELLO-TEST {
+workflow HELLO_TEST {
 
     take:
     ch_samplesheet // channel: samplesheet read in from --input
