@@ -28,7 +28,7 @@ workflow {
     SAMTOOLS_INDEX (reads_bam_ch)
     // Call variants from the indexed BAM file
     GATK_HAPLOTYPECALLER(
-        bam,
+        
         SAMTOOLS_INDEX.out,
         ref_file,
         ref_index_file,

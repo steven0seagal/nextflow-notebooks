@@ -13,7 +13,7 @@ process SAMTOOLS_INDEX {
         path input_bam
 
     output:
-        path "${input_bam}.bai"
+        tuple path(input_bam), path("${input_bam}.bai")
 
     script:
     """
