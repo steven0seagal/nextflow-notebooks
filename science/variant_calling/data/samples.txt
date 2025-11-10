@@ -1,0 +1,3 @@
+/home/bartek/Pycharm/my_projects/nextflow-notebooks/science/variant_calling/data/reads_father.bam
+/home/bartek/Pycharm/my_projects/nextflow-notebooks/science/variant_calling/data/reads_mother.bam
+/home/bartek/Pycharm/my_projects/nextflow-notebooks/science/variant_calling/data/reads_son.bam

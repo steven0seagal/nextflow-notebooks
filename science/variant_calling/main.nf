@@ -1,6 +1,6 @@
 #!/usr/bin/env nextflow
 
-params.reads_bam = "${projectDir}/data/reads_mother.bam"
+params.reads_bam = "${projectDir}/data/samples.txt"
 params.outdir    = "results_genomics"
 // Accessory files
 params.reference        = "${projectDir}/reference/ref.fasta"
@@ -23,7 +23,7 @@ workflow {
     intervals_file  = file(params.intervals)
     bam = file(params.reads_bam)
     
-    reads_bam_ch = Channel.fromPath(params.reads_bam)
+    reads_bam_ch = Channel.fromPath(params.reads_bam).splitText()
 
     SAMTOOLS_INDEX (reads_bam_ch)
     // Call variants from the indexed BAM file
